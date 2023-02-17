@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="10dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/actualTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="50sp"
+                android:fontFamily="@font/muli_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:elevation="8dp"/>
+
+            <TextView
+                android:id="@+id/temperatureMeassure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ºC"
+                android:textSize="20sp"
+                android:fontFamily="@font/muli"
+                app:layout_constraintBottom_toBottomOf="@+id/actualTemperature"
+                app:layout_constraintStart_toEndOf="@+id/actualTemperature" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/daily_forecast_cloudy"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            app:layout_constraintStart_toStartOf="@id/actualTemperature"
+            app:layout_constraintTop_toBottomOf="@id/actualTemperature">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="↑"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/maxTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0º"
+                android:textSize="20sp"
+                android:fontFamily="@font/muli_semibold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="↓"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/minTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0º"
+                android:textSize="20sp"
+                android:fontFamily="@font/muli_semibold"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/progno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pronostico"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/humedity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humedad: 0%"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/realFeel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Real Feel: 0º"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</LinearLayout>
